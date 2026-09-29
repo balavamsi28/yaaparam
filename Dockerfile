@@ -16,7 +16,7 @@ COPY package.json package-lock.json ./
 COPY packages/engine/package.json packages/engine/
 COPY apps/server/package.json apps/server/
 COPY apps/client/package.json apps/client/
-RUN npm ci --omit=dev -w @nagarseth/server --include-workspace-root=false && npm cache clean --force
+RUN npm ci --omit=dev -w @yaaparam/server --include-workspace-root=false && npm cache clean --force
 COPY --from=build /app/apps/server/dist apps/server/dist
 COPY --from=build /app/apps/client/dist apps/client/dist
 USER node

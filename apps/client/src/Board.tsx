@@ -1,5 +1,5 @@
 import { type ReactNode, useEffect, useRef, useState } from 'react';
-import { BOARD, GROUP_COLORS, type ClientGameState, type Tile } from '@nagarseth/engine';
+import { BOARD, GROUP_COLORS, type ClientGameState, type Tile } from '@yaaparam/engine';
 
 const pos = (i: number) =>
   i <= 10 ? { row: 11, col: 11 - i, side: 'b' }

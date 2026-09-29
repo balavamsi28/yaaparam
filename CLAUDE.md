@@ -51,7 +51,7 @@ Work in this order, and do not skip ahead:
 8. Testing, balancing, polish, and deployment.
 
 ## Current status
-Milestones 1-6 are done: docs, skeleton, lobby/rooms, rules-agnostic engine, board/gameplay UI, real-time play, Docker and CI. Since then: room size 2-10, computer opponents (`apps/server/src/bot.ts`), QR/WhatsApp/native sharing, hopping tokens, 3D dice, a player portfolio sheet, Web Audio music and effects, and a mobile-first action dock. The rules implemented are **placeholders** (standard property-trading rules, original theme); see `docs/RULES.md`. Not yet done: the owner's custom rules, choosing a host and deploying, a Docker build check (Docker was not installed on the dev machine), and a first Git commit.
+Milestones 1-6 are done: docs, skeleton, lobby/rooms, rules-agnostic engine, board/gameplay UI, real-time play, Docker and CI. Since then: room size 2-10, computer opponents (`apps/server/src/bot.ts`), QR/WhatsApp/native sharing, hopping tokens, 3D dice, a player portfolio sheet, Web Audio music and effects, and a mobile-first action dock. The rules implemented are **placeholders** (standard property-trading rules, original theme); see `docs/RULES.md`. Not yet done: the owner's custom rules, choosing a host and deploying, a Docker build check (Docker was not installed on the dev machine).
 
 ## Layout
 - `packages/engine`: pure game rules (`applyAction`, board, cards). All rule changes go here, with tests.

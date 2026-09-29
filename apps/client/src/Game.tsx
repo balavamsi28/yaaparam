@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { BOARD, GROUP_COLORS, JAIL_FINE, type Action, type ClientGameState, type Player } from '@nagarseth/engine';
+import { BOARD, GROUP_COLORS, JAIL_FINE, type Action, type ClientGameState, type Player } from '@yaaparam/engine';
 import type { Net } from './net';
 import type { Audio } from './audio';
 import { Board, inr } from './Board';
@@ -191,7 +191,7 @@ function Center({ g, cur, me, mine, net, name, act }: {
 
   return (
     <>
-      <div className="brand">🪔 Nagar Seth</div>
+      <div className="brand">🪔 Yaaparam</div>
       <Dice dice={g.dice} seed={g.log.length} />
       {body}
       {g.trade && g.trade.from === net.view!.you && (

@@ -1,4 +1,4 @@
-import { BOARD, GROUP_COLORS, type ClientGameState, type Player } from '@nagarseth/engine';
+import { BOARD, GROUP_COLORS, type ClientGameState, type Player } from '@yaaparam/engine';
 import { inr } from './Board';
 
 /** UI-only estimate (cash + property/building value, mortgages at half price). Not an authoritative rule. */

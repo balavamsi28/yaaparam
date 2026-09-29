@@ -1,4 +1,4 @@
-# Nagar Seth 🪔
+# Yaaparam 🪔
 
 An original, browser-based multiplayer Indian property-trading board game. Create a room, share the 5-letter code, and play with 2–10 friends in real time. Buy cities, collect rent, build, trade and bankrupt your friends.
 

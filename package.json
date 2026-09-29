@@ -1,5 +1,5 @@
 {
-  "name": "nagar-seth",
+  "name": "yaaparam",
   "private": true,
   "version": "0.1.0",
   "type": "module",
@@ -11,10 +11,10 @@
     "apps/*"
   ],
   "scripts": {
-    "dev": "concurrently -n server,client -c blue,green \"npm run dev -w @nagarseth/server\" \"npm run dev -w @nagarseth/client\"",
+    "dev": "concurrently -n server,client -c blue,green \"npm run dev -w @yaaparam/server\" \"npm run dev -w @yaaparam/client\"",
     "typecheck": "npm run typecheck --workspaces --if-present",
     "test": "vitest run",
-    "build": "npm run build -w @nagarseth/client && npm run build -w @nagarseth/server",
+    "build": "npm run build -w @yaaparam/client && npm run build -w @yaaparam/server",
     "start": "node apps/server/dist/index.js",
     "check": "npm run typecheck && npm test && npm run build"
   },

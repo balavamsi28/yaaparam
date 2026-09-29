@@ -16,12 +16,12 @@
 
 ## Option A: Docker (recommended)
 ```bash
-docker build -t nagar-seth .
-docker run -p 8080:8080 nagar-seth        # http://localhost:8080
+docker build -t yaaparam .
+docker run -p 8080:8080 yaaparam        # http://localhost:8080
 ```
 The image is a two-stage build: build with dev dependencies, then a slim runtime with production dependencies only, running as the non-root `node` user, with a `HEALTHCHECK`. It listens on `8080` (`PORT` can be overridden).
 
-> Docker wasn't installed on the development machine, so the `Dockerfile` itself has **not been built here**. Its riskiest step, the production-only install `npm ci --omit=dev -w @nagarseth/server`, was reproduced in a scratch folder and the resulting server started and served the app. Run one `docker build` before relying on it.
+> Docker wasn't installed on the development machine, so the `Dockerfile` itself has **not been built here**. Its riskiest step, the production-only install `npm ci --omit=dev -w @yaaparam/server`, was reproduced in a scratch folder and the resulting server started and served the app. Run one `docker build` before relying on it.
 
 ## Option B: Any Node host (no Docker)
 | Setting | Value |

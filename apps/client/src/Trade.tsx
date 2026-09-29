@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { BOARD, type ClientGameState, type Trade as TradeT, type TradeSide } from '@nagarseth/engine';
+import { BOARD, type ClientGameState, type Trade as TradeT, type TradeSide } from '@yaaparam/engine';
 import { inr } from './Board';
 
 const tradable = (g: ClientGameState, pid: string) =>

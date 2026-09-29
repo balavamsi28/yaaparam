@@ -120,7 +120,7 @@ io.on('connection', (socket) => {
 
 setInterval(() => R.sweep(ROOM_TTL_MS), 10 * 60 * 1000).unref();
 
-http.listen(PORT, () => console.log(`Nagar Seth server listening on :${PORT}`));
+http.listen(PORT, () => console.log(`Yaaparam server listening on :${PORT}`));
 
 for (const sig of ['SIGTERM', 'SIGINT'] as const) {
   process.on(sig, () => { io.close(); http.close(() => process.exit(0)); setTimeout(() => process.exit(0), 3000).unref(); });

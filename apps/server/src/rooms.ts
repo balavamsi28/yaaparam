@@ -2,7 +2,7 @@ import { randomBytes, randomInt } from 'node:crypto';
 import {
   MAX_PLAYERS, MIN_PLAYERS, applyAction, newGame, toClientState,
   type Action, type GameState, type RoomView,
-} from '@nagarseth/engine';
+} from '@yaaparam/engine';
 
 export const COLORS = ['#e63946', '#f4a261', '#e9c46a', '#2a9d8f', '#457b9d', '#8e6bd8', '#e76fb0', '#6d9f3c', '#00b4d8', '#9c6644'];
 const CODE_ALPHABET = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789'; // no look-alikes (0/O, 1/I/L)

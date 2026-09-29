@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { MIN_PLAYERS } from '@nagarseth/engine';
+import { MIN_PLAYERS } from '@yaaparam/engine';
 import type { Net } from './net';
 import { QrCode } from './QrCode';
 
@@ -11,9 +11,9 @@ export function Lobby({ net }: { net: Net }) {
   const copy = async () => {
     try { await navigator.clipboard.writeText(link); setCopied(true); setTimeout(() => setCopied(false), 1500); } catch { /* clipboard blocked */ }
   };
-  const shareText = `Join my Nagar Seth game! Room code ${v.code}: ${link}`;
+  const shareText = `Join my Yaaparam game! Room code ${v.code}: ${link}`;
   const share = async () => {
-    if (navigator.share) { try { await navigator.share({ title: 'Nagar Seth', text: shareText, url: link }); } catch { /* cancelled */ } }
+    if (navigator.share) { try { await navigator.share({ title: 'Yaaparam', text: shareText, url: link }); } catch { /* cancelled */ } }
     else window.open(`sms:?body=${encodeURIComponent(shareText)}`, '_self');
   };
   const online = v.members.filter((m) => m.connected || m.isBot).length;

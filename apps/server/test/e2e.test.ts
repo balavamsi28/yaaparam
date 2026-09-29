@@ -1,7 +1,7 @@
 import { spawn, type ChildProcess } from 'node:child_process';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 import { io, type Socket } from 'socket.io-client';
-import type { RoomView } from '@nagarseth/engine';
+import type { RoomView } from '@yaaparam/engine';
 
 const PORT = 4100 + Math.floor(Math.random() * 500);
 let server: ChildProcess;

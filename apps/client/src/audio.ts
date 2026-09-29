@@ -5,7 +5,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
  * BGM loop plus a handful of sound effects. No files to fetch, no bandwidth.
  */
 
-const PREF_KEY = 'nagarseth.audio';
+const PREF_KEY = 'yaaparam.audio';
 type Prefs = { music: boolean; sfx: boolean; volume: number };
 const loadPrefs = (): Prefs => {
   try { return { music: true, sfx: true, volume: 0.6, ...JSON.parse(localStorage.getItem(PREF_KEY) ?? '{}') }; }

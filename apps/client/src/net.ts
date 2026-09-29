@@ -1,9 +1,9 @@
 import { useCallback, useEffect, useState } from 'react';
 import { io } from 'socket.io-client';
-import type { Action, RoomView } from '@nagarseth/engine';
+import type { Action, RoomView } from '@yaaparam/engine';
 
 const socket = io({ autoConnect: false });
-const KEY = 'nagarseth.session';
+const KEY = 'yaaparam.session';
 
 type Ack<T> = ({ ok: true } & T) | { ok: false; error: string };
 const call = <T = object>(event: string, data?: unknown) =>

@@ -23,7 +23,7 @@ Owner asked to "install required skills and plugins" and deliver the full, produ
 Node 22.7, npm 10.8, Git 2.50. Docker is **not** installed (consequence: the Dockerfile could not be built locally; see Step 13).
 
 ## Step 4: Workspace skeleton
-npm workspaces monorepo: `packages/engine`, `apps/server`, `apps/client`. Shared `tsconfig.base.json` (strict, `noUncheckedIndexedAccess`) with a path alias `@nagarseth/engine → packages/engine/src`. `.gitignore`. Root scripts: `dev`, `test`, `typecheck`, `build`, `start`, `check`.
+npm workspaces monorepo: `packages/engine`, `apps/server`, `apps/client`. Shared `tsconfig.base.json` (strict, `noUncheckedIndexedAccess`) with a path alias `@yaaparam/engine → packages/engine/src`. `.gitignore`. Root scripts: `dev`, `test`, `typecheck`, `build`, `start`, `check`.
 
 Dependencies and why:
 | Package | Where | Why |
@@ -80,7 +80,7 @@ Drove the production build with headless Chrome (`playwright-core`, installed on
 
 ## Step 13: Verifying what could be verified
 - `npm run check`: typecheck clean, 22/22 tests, build OK. `npm audit` (via install): 0 vulnerabilities.
-- Docker isn't installed, so the image was **not** built. The production-only install (`npm ci --omit=dev -w @nagarseth/server --include-workspace-root=false`) was reproduced in a scratch folder and the server started and served both `/healthz` and the app.
+- Docker isn't installed, so the image was **not** built. The production-only install (`npm ci --omit=dev -w @yaaparam/server --include-workspace-root=false`) was reproduced in a scratch folder and the server started and served both `/healthz` and the app.
 
 ## Step 14: Documentation
 README, ARCHITECTURE, RULES, PROTOCOL, DEPLOYMENT, this log; `CLAUDE.md` updated with the real commands, layout and status.
@@ -95,6 +95,6 @@ README, ARCHITECTURE, RULES, PROTOCOL, DEPLOYMENT, this log; `CLAUDE.md` updated
 ## Not done / next
 - Owner's custom rules (rules here are placeholders).
 - Choose a host and deploy ([DEPLOYMENT.md](DEPLOYMENT.md)); run the pre-launch checklist.
-- Nothing has been committed to Git yet.
+- Renamed from "Nagar Seth" to Yaaparam; first commit exists, GitHub push pending.
 - Bots never trade, so a bot-only table can play forever (documented in ARCHITECTURE.md).
 - Candidates: auctions, turn timer, chat, persistence (PostgreSQL), accounts, richer art.

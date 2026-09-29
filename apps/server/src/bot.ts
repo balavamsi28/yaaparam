@@ -1,4 +1,4 @@
-import { BOARD, JAIL_FINE, type Action, type GameState } from '@nagarseth/engine';
+import { BOARD, JAIL_FINE, type Action, type GameState } from '@yaaparam/engine';
 
 /** A deliberately small, deterministic baseline opponent. */
 export function botAction(game: GameState): Action {

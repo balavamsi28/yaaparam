@@ -2,13 +2,13 @@ import { useState } from 'react';
 import type { Net } from './net';
 
 export function Home({ net }: { net: Net }) {
-  const [name, setName] = useState(() => { try { return localStorage.getItem('nagarseth.name') ?? ''; } catch { return ''; } });
+  const [name, setName] = useState(() => { try { return localStorage.getItem('yaaparam.name') ?? ''; } catch { return ''; } });
   const [code, setCode] = useState(() => new URLSearchParams(location.search).get('room')?.toUpperCase() ?? '');
   const [size, setSize] = useState(6);
   const [busy, setBusy] = useState(false);
 
   const go = async (fn: () => Promise<unknown>) => {
-    try { localStorage.setItem('nagarseth.name', name); } catch { /* ignore */ }
+    try { localStorage.setItem('yaaparam.name', name); } catch { /* ignore */ }
     setBusy(true);
     await fn();
     setBusy(false);
@@ -26,7 +26,7 @@ export function Home({ net }: { net: Net }) {
     <main className="home">
       <div className="hero">
         <div className="diya" aria-hidden>🪔</div>
-        <h1>Nagar Seth</h1>
+        <h1>Yaaparam</h1>
         <p>Buy cities. Build empires. Bankrupt your friends.<br />A multiplayer property-trading game across India.</p>
       </div>
       <div className="card home-card">
